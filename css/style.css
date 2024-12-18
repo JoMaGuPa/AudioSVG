@@ -1,0 +1,97 @@
+.fonsPlayer {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background: linear-gradient(to bottom, #B7E8EB, #015871);
+  overflow: hidden;
+}
+
+.controlButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#volumeSlider {
+  width: 150px;
+}
+
+#volumeIcon,
+#playPauseIcon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+#volumeLevel {
+  font-size: 14px;
+  color: #333;
+  width: 40px;
+  text-align: center;
+}
+
+#playPauseButton img {
+  width: 30px;
+  height: 30px;
+}
+
+.light {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 80%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite, fade 4s ease-in-out infinite alternate;
+  opacity: 0;
+}
+
+.light:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.light:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
+
+.light:nth-child(4) {
+  width: 30px;
+  height: 30px;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.light:nth-child(5) {
+  width: 60px;
+  height: 60px;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(250px) translateX(0px);
+  }
+  50% {
+    transform: translateY(0px) translateX(20px);
+  }
+  100% {
+    transform: translateY(-250px) translateX(-20px);
+  }
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}

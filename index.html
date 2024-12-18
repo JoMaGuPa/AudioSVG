@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Audio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <audio id="player" loop>
+        <source src="media/donPollo.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="fonsPlayer">
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+
+    <div class="controlButtons">
+        <button id="playPauseButton" type="button">
+            <img id="playPauseIcon" src="svg/start.svg" alt="Play" />
+        </button>
+
+        <!-- Icono de volumen ajustado para que no sea texto -->
+        <img id="volumeIcon" src="svg/volum_up.svg" alt="Volume Icon" />
+        <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1">
+        <span id="volumeLevel">100%</span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
